@@ -7,8 +7,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	height: 100%;
 }
-body,
-html {
+body,html {
 	height: 100%;
 	background-color: #fff;
 }
@@ -23,13 +22,12 @@ html {
 .next {
 	right: 0;
 }
-.next,
-.prev {
+.next,.prev {
 	text-align: center;
 	background-color: red;
 	position: absolute;
-	width: 38px;
-	height: 38px;
+	width: 68px;
+	height: 55px;
 }
 .prev {
 	left: 0;
@@ -37,8 +35,7 @@ html {
 .plus {
 	right: 0;
 }
-.minus,
-.plus {
+.minus,.plus {
 	text-align: center;
 	background-color: red;
 	position: absolute;
@@ -62,7 +59,7 @@ html {
 	height: 38px;
 }
 .highlightedText {
-	background-color: #ff0;
+	background-color:yellow;
 	text-underline-position: below;
 	text-decoration: underline;
 }

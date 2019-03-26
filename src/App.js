@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 
+// eslint-disable-next-line no-extend-native
 Array.prototype.shuffle = function () {
   var input = this;
 
