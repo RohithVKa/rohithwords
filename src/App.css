@@ -15,12 +15,13 @@
 }
 .next,.prev {
 	text-align: center;
-	background-color: red;
+	background-color: #c2e7ef;
 	position: absolute;
 	width: 68px;
 	height: 55px;
 	cursor: pointer;
-	
+	font-size: 35px;
+	outline: none;
 }
 .prev {
 	left: 0;
@@ -30,7 +31,7 @@
 }
 .minus,.plus {
 	text-align: center;
-	background-color: red;
+	background-color:#c2e7ef;
 	position: absolute;
 	width: 68px;
 	height: 55px;
@@ -38,6 +39,8 @@
 	-webkit-transform: translate(-50%, 90%);
 	transform: translateY(90%);
 	cursor: pointer;
+	font-size: 35px;
+	outline: none;
 }
 .minus {
 	vertical-align: middle;
@@ -45,13 +48,15 @@
 }
 .reset {
 	text-align: center;
-	background-color: red;
+	background-color:#c2e7ef;
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	width: 38px;
-	height: 38px;
+	width: 68px;
+	height: 40px;
 	cursor: pointer;
+	font-size: 35px;
+	outline: none;
 }
 .highlightedText {
 	background-color:yellow;
