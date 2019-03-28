@@ -347,21 +347,21 @@ class App extends Component {
       <div >
       
       <div className="word" disabled><span className="highlightedText">{first}</span>{second}</div>
-        <div className="prev" onClick={() => { this.handlePrev() }}>
+        <button className="prev" onClick={() => { this.handlePrev() }}>
         {'\u2B05'}
-      </div>
-        <div className="next" onClick={() => { this.handleNext() }}>
+      </button>
+        <button className="next" onClick={() => { this.handleNext() }}>
           {'\u27A1'}
-        </div>
-        <div className="plus" onClick={() => { this.handlePlus() }}>
+        </button>
+        <button className="plus" onClick={() => { this.handlePlus() }}>
           {'\u2795'}
-        </div>
-        <div className="minus" onClick={() => { this.handleMinus() }}>
+        </button>
+        <button className="minus" onClick={() => { this.handleMinus() }}>
           {'\u2796'}
-        </div>
-        <div className="reset" onClick={() => { this.handleReset() }}>
+        </button>
+        <button className="reset" onClick={() => { this.handleReset() }}>
           {'\u27B0'}
-        </div>
+        </button>
 
 			</div>
 		);
