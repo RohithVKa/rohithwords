@@ -286,7 +286,8 @@ class App extends Component {
     if (e > this.state.words.length - 1) {
       e = 0
     }
-    this.setState({ currentWordIndex: e, currentLetterIndex: 0 });
+    this.setState({ currentWordIndex: e });
+    this.setState({currentLetterIndex: 0 });
 
   }
 
