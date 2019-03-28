@@ -277,6 +277,7 @@ class App extends Component {
     };
   }
   componentDidMount(){
+    document.addEventListener('keydown', this.handleKeys);
     this.setState({words:this.state.words.shuffle()});
   }
 
@@ -291,11 +292,9 @@ class App extends Component {
 
   handlePrev() {
     let e = this.state.currentWordIndex - 1;
-    if (e < 0) {
-      e = this.state.words.length - 1;
+    if (e >= 0) {
       this.setState({ currentWordIndex: e, currentLetterIndex: 0 });
 		}
-
   }
   handlePlus() {
     let e = this.state.currentLetterIndex + 1;
@@ -313,6 +312,31 @@ class App extends Component {
     this.setState({ currentLetterIndex: 0 });
   }
 
+  handleKeys = (e) => {
+    switch (e.key) {
+			case "ArrowLeft":
+				this.handleMinus();
+				break;
+			case "ArrowRight":
+				this.handlePlus();
+				break;
+      case "Enter":
+        if (e.shiftKey) {
+          this.handlePrev();
+        } else {
+          this.handleNext();
+        }        
+        break;
+      case "Backspace":
+				this.handleReset();
+				break;
+			case "Delete":
+        this.handleReset();
+				break;
+			default:
+				break;
+		}
+  }
 
 	render() {
     let word = this.state.words[this.state.currentWordIndex];
@@ -320,25 +344,23 @@ class App extends Component {
     let second = word.substring(this.state.currentLetterIndex);
 
 		return (
-      <div>
+      <div >
       
-      <div className="word"><span className="highlightedText">{first}</span>{second}</div>
-
-
-      <div className="prev" onClick={()=>{this.handlePrev()}}>
-        {'<-'}
+      <div className="word" disabled><span className="highlightedText">{first}</span>{second}</div>
+        <div className="prev" onClick={() => { this.handlePrev() }}>
+        {'\u2B05'}
       </div>
         <div className="next" onClick={() => { this.handleNext() }}>
-          {'->'}
+          {'\u27A1'}
         </div>
         <div className="plus" onClick={() => { this.handlePlus() }}>
-          {'+'}
+          {'\u2795'}
         </div>
         <div className="minus" onClick={() => { this.handleMinus() }}>
-          {'-'}
+          {'\u2796'}
         </div>
-        <div className="reset" onClick={() => { this.handleMinus() }}>
-          {'O'}
+        <div className="reset" onClick={() => { this.handleReset() }}>
+          {'\u27B0'}
         </div>
 
 			</div>

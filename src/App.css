@@ -6,6 +6,9 @@
 	top: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	pointer-events: none;
+	outline: none;
+	user-select: none;
 }
 .next {
 	right: 0;
@@ -16,6 +19,8 @@
 	position: absolute;
 	width: 68px;
 	height: 55px;
+	cursor: pointer;
+	
 }
 .prev {
 	left: 0;
@@ -32,6 +37,7 @@
 	top: 50%;
 	-webkit-transform: translate(-50%, 90%);
 	transform: translateY(90%);
+	cursor: pointer;
 }
 .minus {
 	vertical-align: middle;
@@ -45,6 +51,7 @@
 	bottom: 0;
 	width: 38px;
 	height: 38px;
+	cursor: pointer;
 }
 .highlightedText {
 	background-color:yellow;
